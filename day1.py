@@ -1,11 +1,12 @@
 students = []
 
 while True:
-    print("\nMenu:")
+    print(" Menu:")
     print("1. Enter student data")
-    print("2. Exit")
+    print("2. Display all student records")
+    print("3. Exit")
 
-    choice = input("Enter your choice (1/2): ")
+    choice = input("Enter your choice (1/2/3): ")
 
     if choice == "1":
         num_students = int(input("Enter the number of students: "))
@@ -25,13 +26,13 @@ while True:
                 'Grade': grade
             })
 
-       
-        print("\nStudent Data:")
-        print(students)
-
     elif choice == "2":
+        print("\nStudent Data:")
+        print(students)  
+        
+    elif choice == "3":
         print("\nExiting program. Goodbye!")
         break
 
     else:
-        print("\nInvalid choice. Please enter 1 or 2.")
+        print("\nInvalid choice. Please enter 1, 2, or 3.")
