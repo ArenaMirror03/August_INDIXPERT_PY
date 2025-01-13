@@ -1,7 +1,9 @@
 import json
+import os
 students = []
 counter=0
 while True:
+    print("==========================================================")
     print(" Menu:")
     print("1. Enter student data")
     print("2. Display all student records")
@@ -27,8 +29,10 @@ while True:
         if counter ==0:
             print("The list is empty ")
         else:
-            jsondata=json.dumps(students,indent=4)
-            print(jsondata)
+            path = os.getcwd()+"\\jsondata.json"
+            with open(path,"w") as f:
+                f.write(json.dumps(students,indent=4))
+            print("The json file is created")    
         
     elif choice == "3":
         print("\nExiting program. Goodbye!")
