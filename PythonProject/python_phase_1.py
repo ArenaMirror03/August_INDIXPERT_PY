@@ -1,6 +1,7 @@
 import json
 import os
 students = []
+qualifications = []
 counter=0
 while True:
     print("==========================================================")
@@ -10,7 +11,7 @@ while True:
     print("3. Exit")
     choice = input("Enter your choice (1/2/3): ")
 
-    if choice == "1":
+    if choice == "1": 
         num_students = int(input("Enter the number of students: "))
 
         for i in range(num_students):
@@ -18,14 +19,24 @@ while True:
             student_id = int(input("Enter student ID: "))
             name = input("Enter student name: ")
             age = int(input("Enter student age: "))
-            grade = input("Enter student grade: ")
+            grade = input("Enter student grade: ")         
 
-            
+            while True:
+                userinput=int(input("Do you want to add qualification(1: Yes || 0: No): "))
+                if userinput==1:
+                    education = {}
+                    education["Qualification name"] = input("Enter your qualication: ")
+                    education["Passing year"] = int(input("Enter your passing year: "))
+                    qualifications.append(education)
+                else:
+                    break    
+
             students.append({
                 'Student ID': student_id,
                 'Name': name,
                 'Age': age,
-                'Grade': grade
+                'Grade': grade,
+                'qualification': qualifications
             })
             counter=1
 
