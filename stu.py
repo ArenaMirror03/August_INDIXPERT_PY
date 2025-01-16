@@ -10,8 +10,9 @@ while True:
     print(" Menu:")
     print("1. Enter student data")
     print("2. Display all student records")
-    print("3. Exit")
-    choice = input("Enter your choice (1/2/3): ")
+    print("3. To find student records")
+    print("4. Exit")
+    choice = input("Enter your choice (1/2/3/4): ")
 
     if choice == "1":
         num_students = int(input("Enter the number of students: "))
@@ -20,6 +21,7 @@ while True:
             student_id = int(input("Enter student ID: "))
             name = input("Enter student name: ")
             age = int(input("Enter student age: "))
+            mobile_no = int(input("Enter Your Mobile Number: "))
             grade = input("Enter student grade: ")
 
             qualifications = []  
@@ -39,6 +41,7 @@ while True:
                 'Name': name,
                 'Age': age,
                 'Grade': grade,
+                'Mobile_Numeber': mobile_no,
                 'Qualifications': qualifications  
             }
 
@@ -57,8 +60,29 @@ while True:
             print("The json file is created.")
 
     elif choice == "3":
+        if counter == 0:
+            print("No data is available.")
+   
+        else:
+            path = os.getcwd() + "\\Data.json"
+            with open(path, "r") as f:
+                data = json.load(f)
+
+            
+            userinput=int(input("Enter the mobile number you want to search: "))
+            find = False
+            for student in data:
+                if student["Mobile_Numeber"] == userinput:
+                    print("Student Data: ", student) 
+                    find = True                    
+                    break
+
+            if not find:
+                print("No student found with this number.")
+    
+    elif choice == "4":
         print("\nExiting program. Goodbye!")
         break
     else:
-        print("\nInvalid choice. Please enter 1, 2, or 3.")
+        print("\nInvalid choice. Please enter 1, 2, 3 or 4.")
         
