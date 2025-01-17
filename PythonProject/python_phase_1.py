@@ -15,9 +15,7 @@ while True:
     choice = input("Enter your choice (1/2/3/4/5): ")
 
     if choice == "1": 
-       # num_students = int(input("Enter the number of students: "))
-
-        #for i in range(num_students):
+          
             print("\nEnter details for student:")
             student_id = int(input("Enter student ID: "))
             name = input("Enter student name: ")
