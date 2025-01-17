@@ -2,7 +2,7 @@ import json
 import os
 
 students = []
-qualifications = [] 
+
 counter = 0
 
 while True:
@@ -25,7 +25,7 @@ while True:
             mobile_no = int(input("Enter Your Mobile Number: "))
             grade = input("Enter student grade: ")
 
-             
+            qualifications = []             
 
             while True:
                 data = int(input("Do you want to add qualification(1: Yes || 0: NO):"))
@@ -54,11 +54,11 @@ while True:
         if counter == 0:
             print("The list is empty.")
         else:
-            path = os.getcwd() + "\\Data.json"
-            with open(path, "w") as f:
+            path = os.getcwd()+"\\Data.json"
+            with open(path,"w") as f:
                 
-                f.write(json.dumps(students, indent=4))
-            print("The json file is created.")
+                f.write(json.dumps(students,indent=4))
+            print("The json file is created")
 
     elif choice == "3":
         if counter == 0:
