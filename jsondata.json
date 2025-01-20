@@ -1,0 +1,70 @@
+[
+    {
+        "Student ID": 1,
+        "Name": "kaushik",
+        "Age": 20,
+        "Grade": "A",
+        "Phone Number": "3698521475",
+        "Qualification": [
+            {
+                "Qualification name": "10",
+                "Passing year": 2020
+            }
+        ]
+    },
+    {
+        "Student ID": 2,
+        "Name": "sumit",
+        "Age": 21,
+        "Grade": "A",
+        "Phone Number": "1478523695",
+        "Qualification": [
+            {
+                "Qualification name": "10",
+                "Passing year": 2019
+            },
+            {
+                "Qualification name": "12",
+                "Passing year": 2021
+            },
+            {
+                "Qualification name": "btech",
+                "Passing year": 2025
+            }
+        ]
+    },
+    {
+        "Student ID": 3,
+        "Name": "amaan",
+        "Age": 20,
+        "Grade": "A",
+        "Phone Number": "2589631475",
+        "Qualification": [
+            {
+                "Qualification name": "10",
+                "Passing year": 2020
+            },
+            {
+                "Qualification name": "12",
+                "Passing year": 2023
+            }
+        ]
+    },
+    {
+        "Student ID": 4,
+        "Name": "mohsin",
+        "Age": 21,
+        "Grade": "A",
+        "Phone Number": "3214569874",
+        "Qualification": [
+            {
+                "Qualification name": "10",
+                "Passing year": 2018
+            },
+            {
+                "Qualification name": "diploma",
+                "Passing year": 2021
+            }
+        ]
+    }
+]
