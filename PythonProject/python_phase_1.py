@@ -72,7 +72,7 @@ while True:
                 phone_number = int(phone_input)
                 break
 
-        qualifications = []
+        qualifications = [] 
         while True:
             user_input = int(input("Do you want to add qualification (1: Yes || 0: No): "))
             if user_input == 1:
