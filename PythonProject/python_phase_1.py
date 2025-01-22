@@ -21,7 +21,7 @@ while True:
 
     if choice == "1":
         print("\nEnter details for student:")
-        
+
         student_id = None
         while True:
             student_input = input("Enter student ID: ")
@@ -52,7 +52,7 @@ while True:
                 age = age_input
                 break
    
-        grade = None
+        grade = None 
         while True:
             grade_input = input("Enter student grade: ")
             if not grade_input.isalpha():
