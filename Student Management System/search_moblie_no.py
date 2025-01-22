@@ -5,7 +5,7 @@ def search_by_mobile(students):
     if not students:
         print("No data is available.")
         return  
-
+ 
     while True:
         search_number = input("Enter the mobile number you want to search  ")
 
