@@ -63,10 +63,12 @@ while True:
 
         phone_number = None
         while True:
-            phone_input = input("Enter student contact number: ")
+            phone_input = input("Enter student contact number (10 digits): ")
             if not phone_input.isdigit():
-                print("Error: Only numbers. Please try again.")
-            else: 
+                print("Error: Only numbers are allowed. Please try again.")
+            elif len(phone_input) != 10:
+                print("Error: Phone number must be exactly 10 digits. Please try again.")
+            else:
                 phone_number = int(phone_input)
                 break
 
