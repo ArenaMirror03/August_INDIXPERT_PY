@@ -21,11 +21,54 @@ while True:
 
     if choice == "1":
         print("\nEnter details for student:")
-        student_id = int(input("Enter student ID: "))
-        name = input("Enter student name: ")
-        age = int(input("Enter student age: "))
-        grade = input("Enter student grade: ")
-        phone_number = input("Enter your mobile number: ")  
+        
+        student_id = None
+        while True:
+            student_input = input("Enter student ID: ")
+            if not student_input.isdigit():
+                print("Error: Only numbers are allowed for student ID. Please try again.")
+            else:
+                student_id = int(student_input)
+                if any(student['Student ID'] == student_id for student in students):
+                    print("Error: Student ID already exists. Please enter a different ID.")
+                else: 
+                    break
+                    
+        name = None
+        while True:
+            name_input = input("Enter student name: ")
+            if not name_input.isalpha():
+                print("Error: Only character values are allowed for name. Please try again.")
+            else: 
+                name = name_input
+                break
+
+        age = None
+        while True:
+            age_input = input("Enter student age: ")
+            if not age_input.isnumeric():
+                print("Error: Only character values are allowed for name. Please try again.")
+            else: 
+                age = age_input
+                break
+   
+        grade = None
+        while True:
+            grade_input = input("Enter student grade: ")
+            if not grade_input.isalpha():
+                print("Error: Only character values are allowed. Please try again.")
+            else: 
+                grade = grade_input
+                break
+
+        phone_number = None
+        while True:
+            phone_input = input("Enter student contact number: ")
+            if not phone_input.isdigit():
+                print("Error: Only numbers. Please try again.")
+            else: 
+                phone_number = int(phone_input)
+                break
 
         qualifications = []
         while True:
