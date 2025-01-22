@@ -4,7 +4,12 @@ def search_by_mobile(students):
     if not students:
         print("No data is available.")
     else:
-        search_number = input("Enter the mobile number you want to search: ")
+        while True:
+            search_number = input("Enter the mobile number you want to search: ")
+            if not search_number.isdigit():
+                print("Error: Only digits are allowed. Please enter a valid mobile number.")
+            else:
+                break
         found = False
         for student in students:
             if student["Phone Number"] == search_number:

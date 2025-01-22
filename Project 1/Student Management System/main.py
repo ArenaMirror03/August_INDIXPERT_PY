@@ -1,6 +1,6 @@
 import json
 import os
-from registration import register_students
+from student_registration import register_students
 from display import display_students
 from search_moblie_no import search_by_mobile
 from search_qualification import search_by_qualification
