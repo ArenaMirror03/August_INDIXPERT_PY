@@ -1,10 +1,10 @@
 import json
 import os
-from module1 import register_students
-from module2 import display_students
-from module3 import search_by_mobile
-from module4 import search_by_qualification
-from module5 import exit_program
+from registration import register_students
+from display import display_students
+from search_moblie_no import search_by_mobile
+from search_qualification import search_by_qualification
+from exit import exit_program
 
 file_path = os.getcwd() + "\\jsondata.json"
 
