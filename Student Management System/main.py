@@ -6,9 +6,9 @@ from search_moblie_no import search_by_mobile
 from search_qualification import search_by_qualification
 from exit import exit_program
 
-file_path = os.getcwd() + "\\jsondata.json"
+file_path = os.getcwd() + "\\data.json"
 
-if os.path.exists(file_path):
+if os.path.exists(file_path): 
     with open(file_path, "r") as file:
         students = json.load(file)
 else:

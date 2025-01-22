@@ -6,4 +6,4 @@ def display_students(students):
     else:
         print("\nStudent Records:")
         for student in students:
-            print(json.dumps(student, indent=4))
+            print(json.dumps(student, indent=4)) 
