@@ -6,11 +6,11 @@ def register_students(students, file_path):
     student_id = None
     while True:
         student_input = input("Enter student ID: ")
-        if student_input.isdigit():            
+        if student_input.isdigit():
+            student_id = int(student_input)
             if any(student['Student ID'] == student_id for student in students):
                 print("Error: Student ID already exists. Please enter a different ID.")
-            else:
-                student_id = int(student_input) 
+            else: 
                 break
         else:
             print("Error: Only numbers are allowed for student ID. Please try again.")
